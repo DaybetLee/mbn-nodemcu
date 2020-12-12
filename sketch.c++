@@ -19,7 +19,7 @@ int d2 = 4;
 int d1 = 5;
 int retry = 0;
 int retryLimit = 30;
-int ldrLimit = 500;
+int ldrLimit = 450;
 int deepSleepTimer = 5e6;
 int arr[8];
 String apiUrl = "http://mailboxnotify.herokuapp.com/api";
@@ -128,24 +128,6 @@ void connectWiFi()
         Serial.println("connected");
     };
 }
-
-//void getAuthToken(){
-//  apiEndpoint = apiUrl + "/auth";
-//  http.begin(apiEndpoint);
-//  http.addHeader("Content-Type", "application/json");
-//  httpResponseCode = http.POST("{\"mac\":\"" + mac +"\",\"psk\":\"" + secret + "\"}");
-//  if(httpResponseCode==200){
-//    authToken = http.getString();
-//    sendNotification();
-//    http.end();
-//  }
-//  else{
-//    Serial.print("WARN::HTTP request failed - ");
-//    Serial.println(httpResponseCode);
-//    Serial.print("WARN::Fail Reason: ");
-//    Serial.println(http.getString());
-//  };
-//}
 
 void sendNotification()
 {
